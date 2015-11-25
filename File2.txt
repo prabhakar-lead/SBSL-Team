@@ -1,0 +1,29 @@
+Symptom
+
+After adding a SCSI adapter to a system that already uses another SCSI controller or a ServeRAID adapter as the boot controller, the system will not boot to the operating system.
+
+One of the following errors are displayed after POST:
+
+    1962 - Boot Sequence error
+    1962 No Operating System Found
+    BIOS Not Loaded, No devices Found.
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+Affected configurations
+
+All IBM Servers (IBM PC Servers, IBM Netfinity Servers, IBM eServer xSeries), IBM IntelliStation
+Solution
+
+This problem usually occurs due to back-level SCSI Adapter BIOS, which needs to be updated. However, since the SCSI adapter is not being used as a boot device and probably is being used for a tape unit or additional hard drive space, this procedure is always a good idea to do while setting up a system or when first adding the adapter. If the SCSI adapter is an IBM option, check the IBM Personal Systems Support Web site for the latest SCSI BIOS update.
+
+Note: If this tip does not solve the issue, or an IBM component is determined to be faulty, please contact your local IBM Support Center for further troubleshooting or warranty replacement of parts. Please have your Machine Type-Model, serial number, and component Field Replacement Unit (FRU) / Customer Replacement Unit (CRU) part numbers available.
+Workaround
+
+    Press Ctrl+A when prompted during boot to enter the SCSISelect Utility program.
+    Select SCSI Device Configuration.
+    Select Advanced Configuration Options.
+    Select Host Adapter BIOS then press Enter.
+    Select Disabled, or if the option is present, select Disabled - Scan Bus.
+    Press Esc, then select option to Save the SCSI Configuration.
+    Attempt to boot the system again to see if problem is resolved.
