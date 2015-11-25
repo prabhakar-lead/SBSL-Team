@@ -8,6 +8,8 @@ One of the following errors are displayed after POST:
     1962 No Operating System Found
     BIOS Not Loaded, No devices Found.
 
+**************************************8
+
 Affected configurations
 
 All IBM Servers (IBM PC Servers, IBM Netfinity Servers, IBM eServer xSeries), IBM IntelliStation
